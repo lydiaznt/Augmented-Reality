@@ -1,16 +1,16 @@
 # Lesson: Interaction Design
 
-### First and Last Name: xxx
-### University Registration Number: dpsdxxxxx
-### GitHub Personal Profile: xxx
-### Augmented Reality Personal Repository: xxx
+### First and Last Name: Λυδία Ευθυμία Ζωντανού
+### University Registration Number: dpsd19041
+9### GitHub Personal Profile: https://github.com/lydiaznt
+### Augmented Reality Personal Repository:https://github.com/lydiaznt/Augmented-Reality
 
 # Introduction
 
 # Summary
 
 
-# 1st Deliverable
+# 1st Deliverable https://github.com/lydiaznt/Augmented-Reality/blob/main/marker_based/index.html
 
 
 # 2nd Deliverable
@@ -23,3 +23,7 @@
 
 
 # Sources
+κύβοςhttps://aframe.io/docs/1.3.0/primitives/a-box.html#sidebar
+σφαίρα https://aframe.io/docs/1.3.0/primitives/a-sphere.html#sidebar
+κύλινδρος https://aframe.io/docs/1.3.0/primitives/a-cylinder.html#sidebar
+speech command https://github.com/lmalave/aframe-speech-command-component#public-demo
