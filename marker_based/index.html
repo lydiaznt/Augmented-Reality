@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
@@ -12,7 +13,43 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
 <script src="build/aframe-speech-command-component.js"></script>
 
+<script>
+    AFRAME.registerComponent("marker-distance", {
+        init: function () {
+            this.o2 = document.querySelector("#o2")
+            this.H = document.querySelector("#H")
+            this.nero = document.querySelector("#nero")
+            this.marker1 = document.querySelector("#marker1")
+            this.marker2 = document.querySelector("#marker2")
 
+        },
+        tick: function () {
+            var marker1Pos, marker2Pos, markerDistance
+
+            marker1Pos = new THREE.Vector3();
+            this.marker1.object3D.getWorldPosition(marker1Pos);
+
+            marker2Pos = new THREE.Vector3();
+            this.marker2.object3D.getWorldPosition(marker2Pos);
+
+            markerDistance = marker1Pos.disdtanceTo(marker2Pos);
+
+            if (markerDistance < 2) {
+                this.o2.setAttribute("visible", false)
+                this.H.setAttribute("visible", false)
+                this.water.setAttribute("visible", true)
+            } else {
+                this.o2.setAttribute("visible", true)
+                this.H.setAttribute("visible", true)
+                this.nero.setAttribute("visible", false)
+            }
+
+        }
+    });
+
+</script>
+
+<!--1st deliverable-->
 <body style="margin : 0px; overflow: hidden;">
     <a-scene vr-mode-ui="enabled: false;"
              renderer="logarithmicDepthBuffer: true;"
@@ -48,48 +85,14 @@
         </a-marker>
 
         <a-marker id="nero" type='pattern' url="./assets/.patt">
-            <a-entity gltf-model="#gato" scale="1 1 1" position="1 0 0" animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"> > </a-entity>
+            <a-entity gltf-model="#skyliiii" scale="1 1 1" position="1 0 0" animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"> > </a-entity>
         </a-marker>
 
 
         <a-entity camera></a-entity>
 
-        <script>
-            AFRAME.registerComponent("marker-distance", {
-                init: function () {
-                    this.o2 = document.querySelector("#o2")
-                    this.H = document.querySelector("#H")
-                    this.nero = document.querySelector("#nero")
-                    this.marker1 = document.querySelector("#marker1")
-                    this.marker2 = document.querySelector("#marker2")
 
-                },
-                tick: function () {
-                    var marker1Pos, marker2Pos, markerDistance
-
-                    marker1Pos = new THREE.Vector3();
-                    this.marker1.object3D.getWorldPosition(marker1Pos);
-
-                    marker2Pos = new THREE.Vector3();
-                    this.marker2.object3D.getWorldPosition(marker2Pos);
-
-                    markerDistance = marker1Pos.disdtanceTo(marker2Pos);
-
-                    if (markerDistance < 2) {
-                        this.o2.setAttribute("visible", false)
-                        this.H.setAttribute("visible", false)
-                        this.water.setAttribute("visible", true)
-                    } else {
-                        this.o2.setAttribute("visible", true)
-                        this.H.setAttribute("visible", true)
-                        this.nero.setAttribute("visible", false)
-                    }
-
-                }
-            });
-
-        </script>
-
+        <a-entity marker distance></a-entity>
 
         <!--Oxygen animation marker-->
 
@@ -122,3 +125,9 @@
 
 
     </a-scene>
+
+
+
+
+</body>
+</html>
