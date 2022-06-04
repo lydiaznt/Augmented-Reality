@@ -1,0 +1,11 @@
+Model Information:
+* title:	3d Big Ben
+* source:	https://sketchfab.com/3d-models/3d-big-ben-141bf783f3c548e0aff19094a9b113c8
+* author:	daniel132 (https://sketchfab.com/daniel132)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "3d Big Ben" (https://sketchfab.com/3d-models/3d-big-ben-141bf783f3c548e0aff19094a9b113c8) by daniel132 (https://sketchfab.com/daniel132) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
